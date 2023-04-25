@@ -1,0 +1,144 @@
+
+.panel-container {
+  background-color: #12192c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  font-size: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  max-width: 400px;
+  color:#4e54c8;
+  margin:10% auto 2% auto;
+}
+h1{
+  padding-bottom: 15px;
+}
+.panel-container strong {
+  line-height: 20px;
+}
+
+.ratings-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.rating {
+  flex: 1;
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px 5px;
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating img {
+  width: 40px;
+  
+}
+
+.rating small {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0 0;
+}
+
+.rating:hover small,
+.rating.active small {
+  color: #8f94fb;
+}
+
+.btn {
+  background-color: #8f94fb;
+  color: #000;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.fa-heart {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+
+.credit a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .credit {
+      text-align: center;
+  }
+
+
+
+  .navigation {
+    width: 100%;
+    background-color: black;
+  }
+  
+  .image {
+    width: 25px;
+    border-radius: 50px;
+    float: left;
+  }
+  
+  .logout {
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+      position: relative;
+    right: -18px;
+    bottom: -2px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+    
+  }
+  
+  .button {
+      text-decoration: none;
+      float: right;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    width: 50px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+  }
+  
+  a:hover {
+    width: 100px;
+  }
+  
+  a:hover .logout{
+    opacity: .9;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1{
+    text-align: center;
+  }

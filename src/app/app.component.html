@@ -1,0 +1,44 @@
+<header>
+  <nav class="cf">
+   
+    <ul class = "cf">
+      <a class="navbar-brand" id="brand" href="homepage">Airline Reservation System</a>
+      <li>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="nav-link">LOGOUT</a>
+      </li>
+      <li>
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="contactus" class="nav-link">CONTACT-US</a>
+      </li>
+      <li>
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="feedback" class="nav-link">FEEDBACK</a>
+      </li>
+      <li>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="profile-card" class="nav-link">PROFILE CARD</a>
+      </li>
+      <li>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="create-airlinedetails" class="nav-link">NEW AIRLINE</a>
+      </li>
+      <li>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="display-all-airlinedetails" class="nav-link">AIRLINE LIST</a>
+      </li>
+      <li>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="homepage" class="nav-link">HOME</a>
+      </li> 
+    </ul>
+  
+  </nav>
+  </header>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h6 class="animate-charcter">   {{title}}</h6>
+        </div>
+      </div>
+    </div>
+  <div class = "container">
+    <router-outlet></router-outlet>
+  </div>
+  </body>
+  
+  

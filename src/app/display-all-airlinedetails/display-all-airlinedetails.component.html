@@ -1,0 +1,64 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+        <input type="text" class="form-control"
+         placeholder="Search by airline " 
+         [(ngModel)] = "airlineName"/>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" 
+            type="button" (click)="searchByName()">
+            Search</button>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="display">
+<br>
+<a href="display-all-airlinedetails">
+    <button type="button" class="button button2"> All Flights</button></a>
+    <button type="button" class="button button2" (click)="fetchInternationalFlight()"> International Flight</button>
+    <button type="button" class="button button2" (click)="fetchDomesticFlight()"> Domestic Flight</button>
+</div>
+    <h2> AIRLINE LIST</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> AIRLINE NAME  </th>
+            <th> ORIGIN  </th>
+            <th> DESTINATION  </th>
+            <th> SEATING CAPACITY </th>
+            <th> COST </th>
+            <th> ACTIONS </th>
+        </tr>
+    </thead>
+    <tbody class="style">
+        <tr *ngFor="let airlineDetail of airline">
+            <td> {{ airlineDetail.airlineName }} </td>
+            <td> {{ airlineDetail.origin }} </td>
+            <td> {{ airlineDetail.destination }} </td>
+            <td> {{ airlineDetail.seatingCapacity }} </td>
+            <td> {{ airlineDetail.cost }} </td>
+            <td>
+                <button (click)="updateAirlineDetails(airlineDetail.airlineId)" class="btn btn-outline-secondary" 
+                title="This button will alow you to update the airline details"> EDIT</button>
+                <button (click)="displayAirlineDetailsById(airlineDetail.airlineId)" class="btn btn-outline-primary"
+                 title="This button will alow you to view the airline details"style="margin-left: 10px"> VIEW</button>
+                <button (click)="confirmDelete(airlineDetail)" class="btn btn-outline-danger" 
+                title="This button will alow you to delete the airline details"style="margin-left: 10px"> DELETE</button>
+                <button (click)="ticketBookingDetails(airlineDetail)" class="btn btn-outline-dark" 
+                title="This button will alow you to book a tickets in the airline details"style="margin-left: 10px">
+                 BOOK A TICKET</button>
+            </td>
+        </tr>
+        <tr *ngIf="airline.length !== 0">
+                <button (click)="confirmDeleteAll()" class="m-3 btn btn-sm btn-danger" 
+                title="This button will alow you to book a tickets in the airline details" 
+                style="margin-left: 10px">Remove All</button>
+            </tr>
+            <tr scope="row" *ngIf="airline.length === 0">
+<td colspan="4" class="text-center" >No record found</td>
+            </tr>
+    
+            </tbody>
+</table>
+

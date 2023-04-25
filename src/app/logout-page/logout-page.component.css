@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+  .navigation {
+    width: 100%;
+    background-color: black;
+  }
+  
+  img {
+    width: 25px;
+    border-radius: 50px;
+    float: left;
+  }
+  
+  .logout {
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    right: -18px;
+    bottom: -2px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+    
+  }
+  
+  .button {
+    text-decoration: none;
+    float: right;
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    width: 50px;
+    background-color: rgb(1, 1, 1);
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+  }
+  
+  a:hover {
+    width: 100px;
+  }
+  
+  a:hover .logout{
+    opacity: .9;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+    
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color:  #151719;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bolder;
+      min-height: 50vh;
+    }
+    .waviy {
+      position: relative;
+      -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+      font-size: 60px;
+    }
+    .waviy span {
+      font-family: 'Alfa Slab One', cursive;
+      position: relative;
+      display: inline-block;
+      color: #1f0b79;
+      text-transform: uppercase;
+      animation: waviy 1s infinite;
+      animation-delay: calc(.1s * var(--i));
+      
+    }
+    @keyframes waviy {
+      0%,40%,100% {
+        transform: translateY(0)
+      }
+      20% {
+        transform: translateY(-20px)
+      }
+    }
+     
